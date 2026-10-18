@@ -11,7 +11,7 @@ pipeline {
                 sh '''
                     docker create --name testdb \
                       -e MARIADB_ROOT_PASSWORD=sekrit \
-                      -e MARIADB_DATABASE=todo_test_db \
+                      -e MARIADB_DATABASE=todo_db \
                       -e MARIADB_USER=todo_usr \
                       -e MARIADB_PASSWORD=letmeinplz \
                       mariadb:11
