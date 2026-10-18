@@ -19,7 +19,7 @@ pipeline {
                     docker start testdb
 
                     for i in $(seq 1 30); do
-                        docker exec testdb mariadb -h127.0.0.1 -utodo_usr -pletmeinplz todo_test_db \
+                        docker exec testdb mariadb -h127.0.0.1 -utodo_usr -pletmeinplz todo_db \
                           -e 'SELECT 1 FROM todos LIMIT 1' >/dev/null 2>&1 && break
                         sleep 2
                     done
